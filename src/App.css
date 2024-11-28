@@ -1,38 +1,33 @@
+/* App.css */
+
+/* Ensure the body, html, and #root elements take full height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
 .App {
-  text-align: center;
+  position: relative;
+  height: 100vh;  /* Full viewport height */
+  display: flex;  /* Use Flexbox layout */
+  justify-content: flex-start;  /* Align content to the left horizontally */
+  align-items: center;  /* Center content vertically */
+  overflow: hidden;  /* Hide particles that go outside the viewport */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.name {
+  color: white;  /* White text color */
+  font-size: 3rem;  /* Font size for the name */
+  font-weight: 600;  /* Bold text */
+  position: relative;  /* Ensure text is above the particles */
+  z-index: 1;  /* Keep the text above the particles */
+  white-space: nowrap;  /* Prevent text from wrapping to the next line */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Particles container styling */
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;  /* Particles stay behind the text */
 }
