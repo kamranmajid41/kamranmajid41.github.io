@@ -24,6 +24,14 @@ function App() {
     margin: '0',
   };
 
+  const projectLinks = [
+    { name: "Worldstaraunts", link: "https://kamranmajid41.github.io/world-staraunts/" },
+    { name: "The Universe", link: "https://kamranmajid41.github.io/the-universe/" },
+    { name: "Word Search Generator", link: "https://kamranmajid41.github.io/word-search-generator/" },
+    { name: "I Hate Paywalls", link: "https://kamranmajid41.github.io/i-hate-paywalls/" },
+    { name: "Exo-Query", link: "https://kamranmajid41.github.io/exo-query/" },
+  ];
+
   return (
     <>
       {init && (
@@ -73,12 +81,19 @@ function App() {
           <a href="https://devpost.com/kamranmajid41" target="_blank" rel="noopener noreferrer" style={iconStyle}>
             <FaUserCircle />
           </a>
-          <a href="/Kamran_Majid_Resume.pdf" download="Kamran_Majid_Resume.pdf" target="_blank" rel="noopener noreferrer" style={iconStyle}>
-            <FaFilePdf />
-          </a>
         </div>
 
-        
+        <div style={{ marginTop: '2rem', zIndex: 1 }}>
+          <ul style={{ listStyleType: 'none', paddingLeft: '0', marginTop: '0' }}>
+            {projectLinks.map((project, index) => (
+              <li key={index} style={{ marginBottom: '0.5rem' }}>
+                <a href={project.link} target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none', fontSize: '1.2rem' }}>
+                  {project.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );
