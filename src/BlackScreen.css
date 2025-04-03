@@ -1,0 +1,58 @@
+/* Full height black screen */
+.black-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    color: #00ff00; /* Neon green text */
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+  }
+
+  /* Menu Bar Styling */
+.menu-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #111;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+  
+  .menu-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-list li {
+    margin: 0 15px;
+  }
+  
+  .menu-list a {
+    text-decoration: none;
+    color: #00ff00; /* Neon green text */
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-list a:hover {
+    color: #ff00ff; /* Neon pink on hover */
+    text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+  }
+  
+  
+  /* Neon Glowing Animation for Name */
+  @keyframes neon-glow {
+    0% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff; }
+    100% { text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff; }
+  }
+  

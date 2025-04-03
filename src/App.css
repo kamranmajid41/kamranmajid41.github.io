@@ -1,33 +1,90 @@
-/* App.css */
-
-/* Ensure the body, html, and #root elements take full height */
-html, body, #root {
-  height: 100%;
-  margin: 0;
-}
-
-.App {
-  position: relative;
-  height: 100vh;  /* Full viewport height */
-  display: flex;  /* Use Flexbox layout */
-  justify-content: flex-start;  /* Align content to the left horizontally */
-  align-items: center;  /* Center content vertically */
-  overflow: hidden;  /* Hide particles that go outside the viewport */
-}
-
-.name {
-  color: white;  /* White text color */
-  font-size: 3rem;  /* Font size for the name */
-  font-weight: 600;  /* Bold text */
-  position: relative;  /* Ensure text is above the particles */
-  z-index: 1;  /* Keep the text above the particles */
-  white-space: nowrap;  /* Prevent text from wrapping to the next line */
-}
-
-/* Particles container styling */
-#tsparticles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;  /* Particles stay behind the text */
-}
+/* Full height black screen */
+.black-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100vh;
+    background-color: black;
+    color: #00ff00; /* Neon green text */
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+    position: relative; /* Ensure the name stays above the particles */
+    z-index: 0;
+  }
+  
+  /* Menu Bar Styling */
+  .menu-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #111;
+    padding: 10px 0;
+    z-index: 1000; /* Ensure the menu is above other elements */
+  }
+  
+  .menu-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-list li {
+    margin: 0 15px;
+  }
+  
+  .menu-list a {
+    text-decoration: none;
+    color: #00ff00; /* Neon green text */
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-list a:hover {
+    color: #ff00ff; /* Neon pink on hover */
+    text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+  }
+  
+  .name {
+    font-size: 40px; /* Larger size for more impact */
+    z-index: 1000;
+    color:  white; /* Neon pink */
+    font-weight: bold;
+    text-transform: uppercase; /* All uppercase for bold impact */
+    font-family: 'Orbitron', sans-serif; /* Futuristic, geometric font */
+    letter-spacing: 30px; /* Increase letter spacing */
+    text-shadow: 
+      0px 0px 20px rgba(255, 0, 255, 0.8), 
+      0px 0px 30px rgba(255, 0, 255, 0.6),
+      0px 0px 50px rgba(255, 0, 255, 0.4),
+      0px 0px 75px rgba(255, 0, 255, 0.2);
+    animation: neon-glow 1.5s infinite alternate; /* Glow animation */
+    margin-bottom: 20px;
+  }
+  
+  /* Neon glow effect */
+  @keyframes neon-glow {
+    0% {
+      text-shadow: 
+        0px 0px 20px rgba(255, 0, 255, 0.8),
+        0px 0px 30px rgba(255, 0, 255, 0.6),
+        0px 0px 50px rgba(255, 0, 255, 0.4),
+        0px 0px 75px rgba(255, 0, 255, 0.2);
+    }
+    100% {
+      text-shadow: 
+        0px 0px 30px rgba(255, 0, 255, 1),
+        0px 0px 50px rgba(255, 0, 255, 0.8),
+        0px 0px 70px rgba(255, 0, 255, 0.6),
+        0px 0px 100px rgba(255, 0, 255, 0.4);
+    }
+  }
+  
+  
