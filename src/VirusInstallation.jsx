@@ -154,11 +154,6 @@ const VirusInstallation = () => {
     };
   }, [installationComplete]);
 
-  // If the installation is complete, show the black screen
-  if (installationComplete) {
-    return <BlackScreen />; // Render the BlackScreen component
-  }
-
 
   return (
     <div className="virus-container">
