@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, Code, User, Briefcase, Award, Moon, Sun, Building, FileText, BriefcaseBusiness, Users, CheckCircle } from 'lucide-react'; // Added CheckCircle icon
 import ReactMarkdown from 'react-markdown';
+import AiAgentPlatform from './assets/ai_agent.png';
 import ConstellationIO from './assets/constellationio.png';
 import SpaceX from './assets/spacex.jpeg';
 import TheUniverse from './assets/the-universe.png';
@@ -292,6 +293,14 @@ Tools: PyCharm, Visual Studio Code, Google Colab, Figma, Selenium, JIRA, Postman
   );
 
   const projects = [
+    {
+      title: 'AI Agent Platform',
+      image: AiAgentPlatform,
+      badge: 'AI',
+      badgeColor: 'yellow',
+      description: 'Enable businesses to autonomously onboard AI agents with zero vendor intervention in just 5 simple steps.',
+      link: 'https://botslinger.ai/',
+    },
     {
       title: 'Constellation-io',
       image: ConstellationIO,
@@ -626,6 +635,15 @@ Tools: PyCharm, Visual Studio Code, Google Colab, Figma, Selenium, JIRA, Postman
             {[
               {
                 title: 'Software Engineer',
+                company: 'Xplore',
+                duration: 'July 2024 - Present',
+                description: [
+                  'Automated vehicle tasking, telemetry, and image processing.',
+                  'Owned end-to-end feature delivery, optimized spacecraft operations.'
+                ]
+              },
+              {
+                title: 'Software Engineer',
                 company: 'SpaceX (Starship/F9)',
                 duration: 'Aug 2024 - Apr 2025',
                 description: [
@@ -823,38 +841,38 @@ Tools: PyCharm, Visual Studio Code, Google Colab, Figma, Selenium, JIRA, Postman
             <p className={`text-lg text-center mb-6 ${isDarkMode ? 'text-zinc-200' : 'text-gray-700'}`}>
               Have a question or want to work together? Feel free to reach out!
             </p>
-            <form action="https://formspree.io/f/yourFormID" method="POST" className="space-y-6">
+            <form action="https://formspree.io/f/xknqbjll" method="POST" className="space-y-6">
               <div>
-                <label htmlFor="name" className={`block text-sm font-bold mb-2 ${isDarkMode ? 'text-zinc-300' : 'text-gray-700'}`}>
-                  Name
-                </label>
+                <label htmlFor="name" className={`block text-sm font-bold mb-2 ${isDarkMode ? 'text-zinc-300' : 'text-gray-700'}`}>Name</label>
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   className={`shadow appearance-none border rounded-lg w-full py-3 px-4 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200 ${isDarkMode ? 'bg-zinc-700 text-zinc-100 border-zinc-600' : 'bg-white text-gray-700 border-gray-300'}`}
                   placeholder="Your Name"
+                  required
                 />
               </div>
               <div>
-                <label htmlFor="email" className={`block text-sm font-bold mb-2 ${isDarkMode ? 'text-zinc-300' : 'text-gray-700'}`}>
-                  Email
-                </label>
+                <label htmlFor="email" className={`block text-sm font-bold mb-2 ${isDarkMode ? 'text-zinc-300' : 'text-gray-700'}`}>Email</label>
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   className={`shadow appearance-none border rounded-lg w-full py-3 px-4 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200 ${isDarkMode ? 'bg-zinc-700 text-zinc-100 border-zinc-600' : 'bg-white text-gray-700 border-gray-300'}`}
                   placeholder="you@example.com"
+                  required
                 />
               </div>
               <div>
-                <label htmlFor="message" className={`block text-sm font-bold mb-2 ${isDarkMode ? 'text-zinc-300' : 'text-gray-700'}`}>
-                  Message
-                </label>
+                <label htmlFor="message" className={`block text-sm font-bold mb-2 ${isDarkMode ? 'text-zinc-300' : 'text-gray-700'}`}>Message</label>
                 <textarea
                   id="message"
+                  name="message"
                   rows="6"
                   className={`shadow appearance-none border rounded-lg w-full py-3 px-4 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200 ${isDarkMode ? 'bg-zinc-700 text-zinc-100 border-zinc-600' : 'bg-white text-gray-700 border-gray-300'}`}
                   placeholder="Your message..."
+                  required
                 ></textarea>
               </div>
               <button
